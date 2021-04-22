@@ -15,8 +15,11 @@ def index():
   return render_template("index.html", data="KIM")
 
 @app.route('/fig/<int:mean>_<int:var>')    
-# DB연결 X / 인자값을 받아서 바로 그래프를 구성하는 법
+# DB연결 X / 인자값을 받아서 바로 그래프를 구성하는 법                   
 def fig(mean, var):
+
+# <int:mean>_<int:var> 사용 안 하고, DB내 숫자... SELECT.... 여튼... 할 수 있대.... 난 못해...
+# fetchall/fetchone 데이터를 뽑아와서 m, v 변수에 저장해서 할 수 있대....
 
     plt.figure(figsize=(4,3)) # 뭐.... 그래.. 나오는 그래프 사이즈를 정해준단다...
     xs = np.random.normal(mean, var, 100)
