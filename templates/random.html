@@ -1,0 +1,9 @@
+{% extends "includes/layouts.html" %}
+ 
+  {% block body %}
+  <h1 class="display-4">HOME PAGE</h1>
+<p class="lead">This Application is build using by python and Flask Framework</p>
+<hr class="my-4">
+<img src="{{url_for('fig', mean = mean, var = var)}}" alt="이미지 깨짐" width={{width}}, height={{height}}>
+<a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a>
+  {% endblock %}
